@@ -1,0 +1,127 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+img{
+	max-width: 100%;
+	display: block;
+}
+
+
+/******** text-bg ***********/
+.text-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background:#ddd url(../images/stock-photo-146342939.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+ 
+.text-bg h1{
+    flex-grow: 1;
+    font-size: 12rem;
+    text-transform: uppercase;
+    background: url(../images/1.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-repeat: repeat; 
+    background-attachment: fixed;
+    background-size: 25%;
+    position: relative;
+}
+ 
+ 
+
+
+.particles{
+    background: url(../images/2.jpg);
+    height:100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+        overflow: hidden;
+}
+.particles:after{
+content: "";
+    background: seagreen;
+    mix-blend-mode: exclusion;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+
+canvas{
+	    z-index: 1;
+    position: relative;
+}
+
+
+
+ 
+
+
+.video-section{
+    position: relative;
+}
+.video-section:before{
+    content: "";
+    position: absolute;
+    background: #581fa2d1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: lighten;
+    z-index: 1
+}
+#myVideo{
+    max-width: 100%;
+}
+.ani-text{
+	    position: absolute;
+    top: 50%;
+    left: 10%;
+ /*   color: #25434b;*/
+ color: #eee;
+    font-weight: 900;
+    transform: translateY(-50%);
+    z-index: 3
+}
+
+.ani-text h1{
+    font-size: 6em;
+}
+.ani-text p{
+    font-size: 3em;}
+
+
+
+
+
+
+
+    .videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

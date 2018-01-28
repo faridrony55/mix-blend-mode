@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/cssanimation.css">
+  </head>
+  <body>
+
+  <section class="video-section videoWrapper">
+ 
+         <iframe style="position: ; top: 0; left: 0;" width="100%" height="600px" src="https://www.youtube.com/embed/BLL-kW_TpT4?autoplay=1&controls=0&loop=1&playlist=8HSr8BjcufM&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media"  width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+        <div class="ani-text">
+          <h1 class="cssanimation leFadeInTop "> Hello Guys</h1>
+          <p class="cssanimation hu___hu___ ">Here is the text-fill-color , mix-blend-mode css   property </p>
+          <p class="cssanimation hu___hu___ ">  Text animation  plugin work</p>
+        </div>
+
+</section>
+
+
+
+  		<section class="text-bg" id="hero-section-c">
+  			<h1>Coming Soon</h1>
+  		</section>
+
+
+
+  <section class="particles"> 
+    <canvas class="canvas"></canvas>
+  </section>	
+
+
+
+
+ 
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.particles.min.js"></script>
+
+    <script src="js/cssanimation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+
+    <script>
+
+
+
+
+      $(function( $ ){
+
+
+        $('.canvas').particles({
+          connectParticles: false,
+          color: '#999999',
+          size: 10,
+          maxParticles: 550,
+          speed: 0.8
+        });
+  
+    var $body=$("body"),
+  $heroA=$("#hero-section-a img"),
+  $heroB=$("#hero-section-b img"),
+  $heroC=$("#hero-section-c h1");
+  
+  TweenMax.set( $heroA, { transformStyle: 'preserve-3d'  });
+  TweenMax.set( $heroB, { transformStyle: 'preserve-3d'  });
+  TweenMax.set( $heroC, { transformStyle: 'preserve-3d'  });
+  
+  $body.mousemove(function(e) {
+    
+    var sxPos =  e.pageX / $body.width()  * 100 - 50;
+    var syPos =  e.pageY / $body.height() * 100 - 50;
+    console.log("x:" + sxPos + ", y:" + syPos);
+    TweenMax.to( $heroA, 1, { rotationY: 0.25 * sxPos, rotationX: 0.20 * syPos, rotationZ: '-0.1', transformPerspective:500, transformOrigin:'center center' });
+    TweenMax.to( $heroB, 1, { rotationY: 0.20 * sxPos, rotationX: 0.15 * syPos, rotationZ: 0, transformPerspective:500, transformOrigin:'center center' });
+    TweenMax.to( $heroC, 1, { rotationY: 0.05 * sxPos, rotationX: 1.00 * syPos, rotationZ: 0.10, transformPerspective:1000, transformOrigin:'center center' });
+
+  });
+
+
+});
+    </script> 
+
+      </body>
+</html>
